@@ -35,10 +35,9 @@ def load_model(model_path):
 encoder=load_model("Encoder_MP.pkl")
 scaler=load_model("scaler.pkl")
 def load_model_file():
-    custom_objects = {"ReLU": ReLU}
-    return load_model("model_final.h5", custom_objects=custom_objects)
+    custom_object1 = {"ReLU": ReLU}
+    return load_model("model_final.h5", custom_objects=custom_object1)
 
-# Load the model
 model = load_model_file()
 
 uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
