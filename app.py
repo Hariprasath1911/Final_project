@@ -35,8 +35,7 @@ def load_model(model_path):
 encoder=load_model("Encoder_MP.pkl")
 scaler=load_model("scaler.pkl")
 def load_model_file():
-    custom_object1 = {"ReLU": ReLU}
-    return load_model("model_final.h5", custom_objects=custom_object1)
+    return load_model("model_final.h5")
 
 model = load_model_file()
 
