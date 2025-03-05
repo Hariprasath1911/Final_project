@@ -47,11 +47,11 @@ if uploaded_file is not None:
         else:
             st.error("Column 'Machining_Process' not found in the uploaded file.")
 
-        df_scaled = pd.DataFrame(scaler.transform(df), columns=df.columns)
+        df_scaled = scaler.fit_transform(df)
         
     except Exception as e:
         st.error(f"Error: {e}")
 if st.button('Predict'):
-    prediction = model.predict(df)
+    prediction = model.predict(df_scaled)
     st.subheader("Predicted Car Price")
     st.markdown(f"### :green[{prediction}]")
