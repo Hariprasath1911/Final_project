@@ -34,10 +34,7 @@ def load_model(model_path):
         return pickle.load(file)
 encoder=load_model("Encoder_MP.pkl")
 scaler=load_model("scaler.pkl")
-def load_model_file():
-    return load_model("model_final.h5")
-
-model = load_model_file()
+model = tf.keras.models.load_model("model_final.h5")
 
 uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
 
