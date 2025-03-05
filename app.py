@@ -36,7 +36,7 @@ encoder=load_model("Encoder_MP.pkl")
 scaler=load_model("scaler.pkl")
 model = tf.keras.models.load_model("model_final.h5")
 
-uploaded_file = st.file_uploader("Upload an Excel file", type=["csv])
+uploaded_file = st.file_uploader("Upload an Excel file", type=["csv"])
 
 if uploaded_file is not None:
     try:
