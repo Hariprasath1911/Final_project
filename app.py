@@ -52,6 +52,6 @@ if uploaded_file is not None:
     except Exception as e:
         st.error(f"Error: {e}")
 if st.button('Predict'):
-    prediction = model.predict(df_scaled)
+    prediction = model.predict(df)
     st.subheader("Predicted Car Price")
     st.markdown(f"### :green[{prediction}]")
