@@ -1,2 +1,4 @@
 scikit-learn
 base64
+streamlit
+tensorflow
