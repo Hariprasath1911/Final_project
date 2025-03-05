@@ -36,11 +36,11 @@ encoder=load_model("Encoder_MP.pkl")
 scaler=load_model("scaler.pkl")
 model = tf.keras.models.load_model("model_final.h5")
 
-uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
+uploaded_file = st.file_uploader("Upload an Excel file", type=["csv])
 
 if uploaded_file is not None:
     try:
-        df = pd.read_excel(uploaded_file)
+        df = pd.read_csv(uploaded_file)
 
         if 'Machining_Process' in df.columns:
             df['Machining_Process'] = encoder.transform(df["Machining_Process"])
