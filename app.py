@@ -5,6 +5,8 @@ from sklearn.preprocessing import OrdinalEncoder
 import tensorflow as tf
 import pickle
 import base64
+from tensorflow.keras.models import load_model
+from tensorflow.keras.layers import ReLU
 
 def set_background_image_local(image_path):
     with open(image_path, "rb") as file:
@@ -32,7 +34,13 @@ def load_model(model_path):
         return pickle.load(file)
 encoder=load_model("Encoder_MP.pkl")
 scaler=load_model("scaler.pkl")
-model=load_model("model_final.h5")
+def load_model_file():
+    custom_objects = {"ReLU": ReLU}
+    return load_model("model_final.h5", custom_objects=custom_objects)
+
+# Load the model
+model = load_model_file()
+
 uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
 
 if uploaded_file is not None:
