@@ -52,8 +52,8 @@ if uploaded_file is not None:
     except Exception as e:
         st.error(f"Error: {e}")
     st.write(df)
-if st.button('Predict'):
+if st.button('Test Result'):
     df_scaled = scaler.fit_transform(df)
     prediction = model.predict(df_scaled)
-    st.subheader("Predicted Car Price")
-    st.markdown(f"### :green[{prediction[0],prediction[1],prediction[2]}]")
+    st.subheader("Predicted Test Result")
+    st.markdown(f"### :green["Tool Condition:"{["Worn" if p[0] > 0.5 else "Unworn" for p in predictions]}")
