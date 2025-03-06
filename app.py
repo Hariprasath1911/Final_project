@@ -92,10 +92,10 @@ with tab2:
         except Exception as e:
             st.error(f"Error: {e}")
         st.write(df)
-if st.button('Test Result'):
-    df_scaled = scaler.fit_transform(df)
-    prediction = model.predict(df_scaled)
-    st.subheader("Predicted Test Result")
-    st.markdown(f"### :green[Tool Condition:{["Worn" if p[0] > 0.5 else "Unworn" for p in prediction]}]")
-    st.markdown(f"### :green[Machine Finalized:{["Completed" if p[1] > 0.5 else "Not Completed" for p in prediction]}]")
-    st.markdown(f"### :green[Visual Inspection:{["Inspection Passed" if p[2] > 0.5 else "Inspection Failed" for p in prediction]}]")
+    if st.button('Test Result'):
+        df_scaled = scaler.fit_transform(df)
+        prediction = model.predict(df_scaled)
+        st.subheader("Predicted Test Result")
+        st.markdown(f"### :green[Tool Condition:{["Worn" if p[0] > 0.5 else "Unworn" for p in prediction]}]")
+        st.markdown(f"### :green[Machine Finalized:{["Completed" if p[1] > 0.5 else "Not Completed" for p in prediction]}]")
+        st.markdown(f"### :green[Visual Inspection:{["Inspection Passed" if p[2] > 0.5 else "Inspection Failed" for p in prediction]}]")
