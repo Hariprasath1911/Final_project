@@ -57,7 +57,7 @@ if uploaded_file is not None:
     st.write(df)
 if st.button('Test Result'):
     df_scaled = scaler.fit_transform(df)
-    prediction = model.predict(df_scaled)
+    prediction = model.predict(df)
     st.subheader("Predicted Test Result")
     st.markdown(f"### :green[Tool Condition:{["Worn" if p[0] > 0.5 else "Unworn" for p in prediction]}]")
     st.markdown(f"### :green[Machine Finalized:{["Completed" if p[1] > 0.5 else "Not Completed" for p in prediction]}]")
