@@ -35,26 +35,63 @@ def load_model(model_path):
 encoder=load_model("Encoder_MP.pkl")
 scaler=load_model("scaler.pkl")
 model = tf.keras.models.load_model("model_final.h5")
-
-uploaded_file = st.file_uploader("Upload an Excel file", type=["csv"])
-
-if uploaded_file is not None:
-    try:
-        df = pd.read_csv(uploaded_file, dtype=str)
-        for col in df.columns:
-            try:
-                df[col] = pd.to_numeric(df[col], errors='ignore')
-            except:
-                pass
-
-        if 'Machining_Process' in df.columns:
-            df['Machining_Process'] = encoder.fit_transform(df[["Machining_Process"]])
-        else:
-            st.error("Column 'Machining_Process' not found in the uploaded file.")
+tab1, tab2 = st.tabs(["Home", "Application"])
+with tab1:
+    st.markdown("""
+        1. Introduction
+        In modern manufacturing, CNC (Computer Numerical Control) machines play a critical role in precision machining.
+        However, unexpected failures and inefficiencies can lead to costly downtimes.
+        My CNC Time Series Analysis project utilizes deep learning to analyze machine data, predict performance trends, and detect anomalies,
+        ensuring optimal machine health and efficiency.
         
-    except Exception as e:
-        st.error(f"Error: {e}")
-    st.write(df)
+        2. Problem Statement
+        CNC machines generate large volumes of time-series data, including spindle speed, feed rate, tool wear, and temperature variations.
+        Manually monitoring these parameters is challenging and inefficient. Unscheduled downtime leads to production losses and increased maintenance costs.
+        This project leverages deep learning models to identify patterns, detect anomalies, and predict potential failures, allowing for proactive maintenance.
+        
+        3. Key Features
+        ✅ Real-Time Data Analysis – Processes CNC machine time-series data efficiently.
+        ✅ Deep Learning Models – Implements LSTM/GRU-based models for precise forecasting.
+        ✅ Anomaly Detection – Identifies unusual patterns to prevent machine failures.
+        ✅ Feature Engineering – Extracts meaningful insights from historical machine logs.
+        ✅ Interactive Dashboard – A Streamlit-based UI for visualizing trends and alerts.
+        
+        4. Target Audience
+        🔹 Manufacturing Industries – Optimizing CNC machine performance and reducing downtime.
+        🔹 Maintenance Teams – Predicting potential failures for proactive servicing.
+        🔹 Industrial Data Analysts – Utilizing AI-driven insights for process optimization.
+        
+        5. Technologies Used
+        🔸 Frontend: Streamlit for an intuitive and interactive web app.
+        🔸 Backend: Python with libraries like TensorFlow/Keras, Pandas, and NumPy.
+        🔸 Machine Learning: LSTM/GRU models for time-series forecasting and anomaly detection.
+        🔸 Data Handling: Preprocessing using Pandas and Scikit-learn.
+        
+        7. Conclusion
+        The CNC Time Series Analysis project is a data-driven approach to predictive maintenance in manufacturing.
+        By leveraging deep learning, it enhances CNC machine efficiency, minimizes downtime, and provides actionable insights for maintenance teams.
+        This project bridges the gap between AI and industrial automation, bringing intelligent decision-making to CNC operations.
+        """)
+with tab2:
+    uploaded_file = st.file_uploader("Upload an Excel file", type=["csv"])
+
+    if uploaded_file is not None:
+        try:
+            df = pd.read_csv(uploaded_file, dtype=str)
+            for col in df.columns:
+                try:
+                    df[col] = pd.to_numeric(df[col], errors='ignore')
+                except:
+                    pass
+    
+            if 'Machining_Process' in df.columns:
+                df['Machining_Process'] = encoder.fit_transform(df[["Machining_Process"]])
+            else:
+                st.error("Column 'Machining_Process' not found in the uploaded file.")
+            
+        except Exception as e:
+            st.error(f"Error: {e}")
+        st.write(df)
 if st.button('Test Result'):
     df_scaled = scaler.fit_transform(df)
     prediction = model.predict(df_scaled)
