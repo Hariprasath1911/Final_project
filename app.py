@@ -61,4 +61,4 @@ if st.button('Test Result'):
     df_scaled = scaler.fit_transform(df)
     prediction = model.predict(df_scaled)
     st.subheader("Predicted Test Result")
-    st.markdown(f"### :green[Tool Condition:{["Worn" if p[0] > 0.5 else "Unworn" for p in prediction]}")
+    st.markdown(f"### :green[Tool Condition:{[p for p in prediction]}")
