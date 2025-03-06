@@ -56,4 +56,4 @@ if st.button('Predict'):
     df_scaled = scaler.fit_transform(df)
     prediction = model.predict(df_scaled)
     st.subheader("Predicted Car Price")
-    st.markdown(f"### :green[{prediction}]")
+    st.markdown(f"### :green[{prediction[0],prediction[1],prediction[2]}]")
