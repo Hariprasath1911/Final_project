@@ -51,8 +51,6 @@ if uploaded_file is not None:
             df['Machining_Process'] = encoder.fit_transform(df[["Machining_Process"]])
         else:
             st.error("Column 'Machining_Process' not found in the uploaded file.")
-
-        df_scaled = scaler.fit_transform(df)
         
     except Exception as e:
         st.error(f"Error: {e}")
