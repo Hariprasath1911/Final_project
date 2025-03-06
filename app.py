@@ -40,7 +40,12 @@ uploaded_file = st.file_uploader("Upload an Excel file", type=["csv"])
 
 if uploaded_file is not None:
     try:
-        df = pd.read_csv(uploaded_file)
+        df = pd.read_csv(uploaded_file, dtype=str)
+        for col in df.columns:
+        try:
+            df[col] = pd.to_numeric(df[col], errors='ignore')
+        except:
+            pass
 
         if 'Machining_Process' in df.columns:
             df['Machining_Process'] = encoder.fit_transform(df[["Machining_Process"]])
