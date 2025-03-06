@@ -99,7 +99,7 @@ with tab2:
         df["Tool Wear"] = ["Worn" if p[0] > 0.5 else "Unworn" for p in prediction]
         df["Visual inspection"] = ["Properly Clamped" if p[1] > 0.5 else "Not Properly Clamped" for p in prediction]
         df["Machining Completion"] = ["Completed" if p[2] > 0.5 else "Not Completed" for p in prediction]
-        #st.write(df)
+        st.write(df)
         st.download_button("Download Predictions", df.to_csv(index=False), "predictions.csv", "text/csv")
         st.markdown(f"### :green[Tool Condition:{["Worn" if p[0] > 0.5 else "Unworn" for p in prediction]}]")
         st.markdown(f"### :green[Machine Finalized:{["Completed" if p[1] > 0.5 else "Not Completed" for p in prediction]}]")
