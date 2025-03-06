@@ -62,5 +62,5 @@ if st.button('Test Result'):
     prediction = model.predict(df_scaled)
     st.subheader("Predicted Test Result")
     st.markdown(f"### :green[Tool Condition:{["Worn" if p[0] > 0.5 else "Unworn" for p in predictions]}")
-    st.markdown(f"### :green[Machine Finalized:{["Completed" if p[2] > 0.5 else "Not Completed" for p in predictions]}")
-    st.markdown(f"### :green[Visual Inspection:{["Inspection Passed" if p[1] > 0.5 else "Inspection Failed" for p in predictions]}")
+    st.markdown(f"### :green[Machine Finalized:{["Completed" if p[1] > 0.5 else "Not Completed" for p in predictions]}")
+    st.markdown(f"### :green[Visual Inspection:{["Inspection Passed" if p[2] > 0.5 else "Inspection Failed" for p in predictions]}")
