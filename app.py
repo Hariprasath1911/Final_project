@@ -51,6 +51,7 @@ if uploaded_file is not None:
         
     except Exception as e:
         st.error(f"Error: {e}")
+    st.write(df)
 if st.button('Predict'):
     df_scaled = scaler.fit_transform(df)
     prediction = model.predict(df_scaled)
