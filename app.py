@@ -28,7 +28,7 @@ def set_background_image_local(image_path):
     )
 
 set_background_image_local(r"12.png")
-
+st.markdown("### CNC Insights: Real-time Data & Predictive Analytics")
 def load_model(model_path):
     with open(model_path, 'rb') as file:
         return pickle.load(file)
