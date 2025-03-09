@@ -64,7 +64,6 @@ with tab1:
         **5. Technologies Used**
         🔸 Frontend: Streamlit for an intuitive and interactive web app.
         🔸 Backend: Python with libraries like TensorFlow/Keras, Pandas, and NumPy.
-        🔸 Machine Learning: LSTM/GRU models for time-series forecasting and anomaly detection.
         🔸 Data Handling: Preprocessing using Pandas and Scikit-learn.
         
         **7. Conclusion**
