@@ -126,6 +126,21 @@ with tab2:
         df["Visual inspection"] = ["Properly Clamped" if p[1] > 0.5 else "Not Properly Clamped" for p in prediction]
         df["Machining Completion"] = ["Completed" if p[2] > 0.5 else "Not Completed" for p in prediction]
         st.write(df)
+        st.markdown(
+        """
+        <style>
+        div.stDownloadButton > button {
+            color: white !important;  /* Text color */
+            background-color: green !important;  /* Button background color */
+            border-radius: 10px !important;  /* Rounded corners */
+            font-size: 18px !important;  /* Font size */
+            font-weight: bold !important; /* Bold text */
+            padding: 10px 20px !important; /* Padding */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+        )
         st.download_button("Download Predictions", df.to_csv(index=False), "predictions.csv", "text/csv")
 
         tool_condition = ["Worn" if p[0] > 0.5 else "Unworn" for p in prediction]
