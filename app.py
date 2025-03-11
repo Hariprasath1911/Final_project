@@ -100,7 +100,16 @@ with tab2:
         df["Machining Completion"] = ["Completed" if p[2] > 0.5 else "Not Completed" for p in prediction]
         st.write(df)
         st.download_button("Download Predictions", df.to_csv(index=False), "predictions.csv", "text/csv")
-        st.markdown(f"### :green[Tool Condition:{["Worn" if p[0][0] > 0.5 else "Unworn" for p in prediction]}]")
-        st.markdown(f"### :green[Machine Finalized:{["Completed" if p[1][0] > 0.5 else "Not Completed" for p in prediction]}]")
-        st.markdown(f"### :green[Visual Inspection:{["Inspection Passed" if p[2][0] > 0.5 else "Inspection Failed" for p in prediction]}]")
+
+        tool_condition = ["Worn" if p[0][0] > 0.5 else "Unworn" for p in prediction]
+        machine_finalized = ["Completed" if p[1][0] > 0.5 else "Not Completed" for p in prediction]
+        visual_inspection = ["Inspection Passed" if p[2][0] > 0.5 else "Inspection Failed" for p in prediction]
+        
+        st.markdown(f"### :green[Tool Condition: {tool_condition}]")
+        st.markdown(f"### :green[Machine Finalized: {machine_finalized}]")
+        st.markdown(f"### :green[Visual Inspection: {visual_inspection}]")
+
+        #st.markdown(f"### :green[Tool Condition:{["Worn" if p[0][0] > 0.5 else "Unworn" for p in prediction]}]")
+        #st.markdown(f"### :green[Machine Finalized:{["Completed" if p[1][0] > 0.5 else "Not Completed" for p in prediction]}]")
+        #st.markdown(f"### :green[Visual Inspection:{["Inspection Passed" if p[2][0] > 0.5 else "Inspection Failed" for p in prediction]}]")
         
