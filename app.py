@@ -149,6 +149,9 @@ with tab2:
             font-weight: bold !important; /* Bold text */
             padding: 10px 20px !important; /* Padding */
         }
+        div.stDownloadButton > DownloadButton:hover {
+        background-color: #005f73 !important; /* Darker blue on hover */
+        transform: scale(1.05);
         </style>
         """,
         unsafe_allow_html=True
