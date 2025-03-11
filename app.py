@@ -30,7 +30,7 @@ def set_background_image_local(image_path):
 set_background_image_local(r"12.png")
 st.markdown(
     """
-    <h1 style='color: green; font-family: "Arial", sans-serif; font-size: 40px; 
+    <h1 style='color: black; font-family: "Arial", sans-serif; font-size: 40px; 
                text-shadow: 3px 3px 8px rgba(0,0,0,0.5); text-align: center;'>
         CNC : Real-time Data & Predictive Analytics
     </h1>
