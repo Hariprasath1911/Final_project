@@ -74,6 +74,7 @@ with tab1:
             My CNC Time Series Analysis project utilizes deep learning to analyze machine data, predict performance trends, and detect anomalies,
             ensuring optimal machine health and efficiency.
             
+            <h1>1. Introduction</h1>
             <h1>2. Problem Statement</h1>
             CNC machines generate large volumes of time-series data, including spindle speed, feed rate, tool wear, and temperature variations.
             Manually monitoring these parameters is challenging and inefficient. Unscheduled downtime leads to production losses and increased maintenance costs.
