@@ -77,7 +77,7 @@ with tab2:
     <style>
     .stFileUploader label {
         color: green !important;  /* Change text color */
-        font-size: 18px !important; /* Change font size */
+        font-size: 20px !important; /* Change font size */
         font-weight: bold !important;
     }
     </style>
@@ -103,6 +103,18 @@ with tab2:
         except Exception as e:
             st.error(f"Error: {e}")
         st.write(df)
+    st.markdown(
+    """
+    <style>
+    .st.button label {
+        color: green !important;  /* Change text color */
+        font-size: 20px !important; /* Change font size */
+        font-weight: bold !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+    )        
     if st.button('Test Result'):
         df_scaled = scaler.fit_transform(df)
         prediction = model.predict(df_scaled)
