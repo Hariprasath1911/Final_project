@@ -8,26 +8,54 @@ import base64
 from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import ReLU
 
-def set_background_image_local(image_path):
-    with open(image_path, "rb") as file:
-        data = file.read()
-    base64_image = base64.b64encode(data).decode("utf-8")
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("data:image/png;base64,{base64_image}");
-            background-size: contain;
-            background-position: fit;
-            background-repeat: repeat;
-            background-attachment: fixed;
-        }}     
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+st.markdown(
+    """
+    <style>
+    .background-image {
+        position: relative;
+        width: 100%;
+        height: 500px; /* Adjust height as needed */
+        background-image: url('r"12.png');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;  /* Adjust opacity (1 is fully visible, 0 is fully transparent) */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-set_background_image_local(r"12.png")
+# Add text or other content on top of the image (optional)
+st.markdown(
+    """
+    <div class="background-image">
+        <h2 style='color: white; text-align: center; padding-top: 200px; font-size: 40px;'>
+            CNC : Real-time Data & Predictive Analytics
+        </h2>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+#def set_background_image_local(image_path):
+ #   with open(image_path, "rb") as file:
+  #      data = file.read()
+   # base64_image = base64.b64encode(data).decode("utf-8")
+    #st.markdown(
+     #   f"""
+      #  <style>
+       # .stApp {{
+        #    background-image: url("data:image/png;base64,{base64_image}");
+         #   background-size: contain;
+          #  background-position: fit;
+           # background-repeat: repeat;
+            #background-attachment: fixed;
+        #}}     
+        #</style>
+        #""",
+        #unsafe_allow_html=True
+    #)
+
+#set_background_image_local(r"12.png")
 st.markdown(
     """
     <h1 style='color: green; font-family: "Arial", sans-serif; font-size: 40px; 
