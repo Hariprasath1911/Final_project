@@ -28,7 +28,15 @@ def set_background_image_local(image_path):
     )
 
 set_background_image_local(r"12.png")
-st.markdown("### CNC : Real-time Data & Predictive Analytics")
+st.markdown(
+    """
+    <h1 style='color: green; font-family: "Arial", sans-serif; font-size: 36px; 
+               text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); text-align: center;'>
+        CNC : Real-time Data & Predictive Analytics
+    </h1>
+    """,
+    unsafe_allow_html=True
+)
 def load_model(model_path):
     with open(model_path, 'rb') as file:
         return pickle.load(file)
