@@ -72,7 +72,19 @@ with tab1:
         This project bridges the gap between AI and industrial automation, bringing intelligent decision-making to CNC operations.
         """)
 with tab2:
-    uploaded_file = st.file_uploader("Upload an Excel file", type=["csv"])
+    st.markdown(
+    """
+    <style>
+    .stFileUploader label {
+        color: green !important;  /* Change text color */
+        font-size: 18px !important; /* Change font size */
+        font-weight: bold !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+    uploaded_file = st.file_uploader("**Upload an Excel file**", type=["csv"])
 
     if uploaded_file is not None:
         try:
