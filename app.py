@@ -181,9 +181,9 @@ with tab2:
         machine_finalized = ["Completed" if p[1] > 0.5 else "Not Completed" for p in prediction]
         visual_inspection = ["Inspection Passed" if p[2] > 0.5 else "Inspection Failed" for p in prediction]
         
-        st.markdown(f"### :green[Tool Condition: {tool_condition[0]}]")
-        st.markdown(f"### :green[Machine Finalized: {machine_finalized[0]}]")
-        st.markdown(f"### :green[Visual Inspection: {visual_inspection[0]}]")
+        st.markdown(f"### :blue[Tool Condition: {tool_condition[0]}]")
+        st.markdown(f"### :blue[Machine Finalized: {machine_finalized[0]}]")
+        st.markdown(f"### :blue[Visual Inspection: {visual_inspection[0]}]")
 
         #st.markdown(f"### :green[Tool Condition:{["Worn" if p[0][0] > 0.5 else "Unworn" for p in prediction]}]")
         #st.markdown(f"### :green[Machine Finalized:{["Completed" if p[1][0] > 0.5 else "Not Completed" for p in prediction]}]")
