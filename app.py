@@ -106,10 +106,13 @@ with tab2:
     st.markdown(
     """
     <style>
-    .stbutton label {
-        color: green !important;  /* Change text color */
-        font-size: 20px !important; /* Change font size */
-        font-weight: bold !important;
+    div.stButton > button {
+        color: white !important;  /* Text color */
+        background-color: green !important;  /* Button background color */
+        border-radius: 10px !important;  /* Rounded corners */
+        font-size: 18px !important;  /* Font size */
+        font-weight: bold !important; /* Bold text */
+        padding: 10px 20px !important; /* Padding */
     }
     </style>
     """,
