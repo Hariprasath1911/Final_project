@@ -45,7 +45,19 @@ scaler=load_model("scaler.pkl")
 model = tf.keras.models.load_model("model_final.h5")
 tab1, tab2 = st.tabs(["**Home**", "**Application**"])
 with tab1:
-    st.markdown("""
+    st.markdown(
+    """
+    <style>
+    h1 {
+        color: white;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+
+    st.markdown("""<h1>
         **1. Introduction**
         In modern manufacturing, CNC (Computer Numerical Control) machines play a critical role in precision machining.
         However, unexpected failures and inefficiencies can lead to costly downtimes.
@@ -78,7 +90,7 @@ with tab1:
         The CNC Time Series Analysis project is a data-driven approach to predictive maintenance in manufacturing.
         By leveraging deep learning, it enhances CNC machine efficiency, minimizes downtime, and provides actionable insights for maintenance teams.
         This project bridges the gap between AI and industrial automation, bringing intelligent decision-making to CNC operations.
-        """)
+        <h1>""", unsafe_allow_html=True)
 with tab2:
     st.markdown(
     """
