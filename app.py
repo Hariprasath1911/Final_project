@@ -57,8 +57,8 @@ with tab1:
     unsafe_allow_html=True
     )
 
-    st.markdown("""
-        <h1>**1. Introduction**
+    st.markdown("""<h1>
+        **1. Introduction**
         In modern manufacturing, CNC (Computer Numerical Control) machines play a critical role in precision machining.
         However, unexpected failures and inefficiencies can lead to costly downtimes.
         My CNC Time Series Analysis project utilizes deep learning to analyze machine data, predict performance trends, and detect anomalies,
