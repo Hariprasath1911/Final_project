@@ -46,50 +46,61 @@ model = tf.keras.models.load_model("model_final.h5")
 tab1, tab2 = st.tabs(["**Home**", "**Application**"])
 with tab1:
     st.markdown(
-    """
-    <style>
-    h1 {
-        color: white;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
+        """
+        <style>
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
+            border-radius: 10px;  /* Rounded corners */
+            padding: 20px;        /* Add padding around the text */
+            margin: 20px;         /* Space around the box */
+            width: 80%;           /* Set the width of the box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+            font-family: 'Arial', sans-serif; /* Use a clean font */
+        }
+        h1 {
+            color: black; /* Color for headings */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for readability */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
     )
-
+    
     st.markdown("""
-        <h1>**1. Introduction**</h1>
-        In modern manufacturing, CNC (Computer Numerical Control) machines play a critical role in precision machining.
-        However, unexpected failures and inefficiencies can lead to costly downtimes.
-        My CNC Time Series Analysis project utilizes deep learning to analyze machine data, predict performance trends, and detect anomalies,
-        ensuring optimal machine health and efficiency.
-        
-        <h1>**2. Problem Statement**</h1>
-        CNC machines generate large volumes of time-series data, including spindle speed, feed rate, tool wear, and temperature variations.
-        Manually monitoring these parameters is challenging and inefficient. Unscheduled downtime leads to production losses and increased maintenance costs.
-        This project leverages deep learning models to identify patterns, detect anomalies, and predict potential failures, allowing for proactive maintenance.
-        
-        <h1>**3. Key Features**</h1>
-        ✅ Real-Time Data Analysis – Processes CNC machine time-series data efficiently.<br>
-        ✅ Deep Learning Models – Implements LSTM/GRU-based models for precise forecasting.<br>
-        ✅ Anomaly Detection – Identifies unusual patterns to prevent machine failures.<br>
-        ✅ Feature Engineering – Extracts meaningful insights from historical machine logs.<br>
-        ✅ Interactive Dashboard – A Streamlit-based UI for visualizing trends and alerts.<br>
-        
-        <h1>**4. Target Audience**</h1>
-        🔹 Manufacturing Industries – Optimizing CNC machine performance and reducing downtime.<br>
-        🔹 Maintenance Teams – Predicting potential failures for proactive servicing.<br>
-        🔹 Industrial Data Analysts – Utilizing AI-driven insights for process optimization.<br>
-        
-        <h1>**5. Technologies Used**</h1>
-        🔸 Frontend: Streamlit for an intuitive and interactive web app.<br>
-        🔸 Backend: Python with libraries like TensorFlow/Keras, Pandas, and NumPy.<br>
-        🔸 Data Handling: Preprocessing using Pandas and Scikit-learn.<br>
-        
-        <h1>**6. Conclusion**</h1>
-        The CNC Time Series Analysis project is a data-driven approach to predictive maintenance in manufacturing.
-        By leveraging deep learning, it enhances CNC machine efficiency, minimizes downtime, and provides actionable insights for maintenance teams.
-        This project bridges the gap between AI and industrial automation, bringing intelligent decision-making to CNC operations.
+        <div class="content-box">
+            <h1>1. Introduction</h1>
+            In modern manufacturing, CNC (Computer Numerical Control) machines play a critical role in precision machining.
+            However, unexpected failures and inefficiencies can lead to costly downtimes.
+            My CNC Time Series Analysis project utilizes deep learning to analyze machine data, predict performance trends, and detect anomalies,
+            ensuring optimal machine health and efficiency.
+            
+            <h1>2. Problem Statement</h1>
+            CNC machines generate large volumes of time-series data, including spindle speed, feed rate, tool wear, and temperature variations.
+            Manually monitoring these parameters is challenging and inefficient. Unscheduled downtime leads to production losses and increased maintenance costs.
+            This project leverages deep learning models to identify patterns, detect anomalies, and predict potential failures, allowing for proactive maintenance.
+            
+            <h1>3. Key Features</h1>
+            ✅ Real-Time Data Analysis – Processes CNC machine time-series data efficiently.<br>
+            ✅ Deep Learning Models – Implements LSTM/GRU-based models for precise forecasting.<br>
+            ✅ Anomaly Detection – Identifies unusual patterns to prevent machine failures.<br>
+            ✅ Feature Engineering – Extracts meaningful insights from historical machine logs.<br>
+            ✅ Interactive Dashboard – A Streamlit-based UI for visualizing trends and alerts.<br>
+            
+            <h1>4. Target Audience</h1>
+            🔹 Manufacturing Industries – Optimizing CNC machine performance and reducing downtime.<br>
+            🔹 Maintenance Teams – Predicting potential failures for proactive servicing.<br>
+            🔹 Industrial Data Analysts – Utilizing AI-driven insights for process optimization.<br>
+            
+            <h1>5. Technologies Used</h1>
+            🔸 Frontend: Streamlit for an intuitive and interactive web app.<br>
+            🔸 Backend: Python with libraries like TensorFlow/Keras, Pandas, and NumPy.<br>
+            🔸 Data Handling: Preprocessing using Pandas and Scikit-learn.<br>
+            
+            <h1>6. Conclusion</h1>
+            The CNC Time Series Analysis project is a data-driven approach to predictive maintenance in manufacturing.
+            By leveraging deep learning, it enhances CNC machine efficiency, minimizes downtime, and provides actionable insights for maintenance teams.
+            This project bridges the gap between AI and industrial automation, bringing intelligent decision-making to CNC operations.
+        </div>
     """, unsafe_allow_html=True)
 with tab2:
     st.markdown(
