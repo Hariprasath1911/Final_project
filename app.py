@@ -53,7 +53,7 @@ with tab1:
             border-radius: 10px;  /* Rounded corners */
             padding: 20px;        /* Add padding around the text */
             margin: 20px;         /* Space around the box */
-            width: 90%;           /* Set the width of the box */
+            width: 100%;           /* Set the width of the box */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
             font-family: 'Arial', sans-serif; /* Use a clean font */
         }
