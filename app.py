@@ -35,7 +35,7 @@ def load_model(model_path):
 encoder=load_model("Encoder_MP.pkl")
 scaler=load_model("scaler.pkl")
 model = tf.keras.models.load_model("model_final.h5")
-tab1, tab2 = st.tabs(["Home", "Application"])
+tab1, tab2 = st.tabs(["**Home**", "**Application**"])
 with tab1:
     st.markdown("""
         **1. Introduction**
