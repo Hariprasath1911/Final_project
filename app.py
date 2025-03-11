@@ -16,6 +16,10 @@ def set_background_image_local(image_path):
         f"""
         <style>
         .stApp {{
+            position: relative;
+            width: 100%;
+            height: 500px; /* Adjust height as needed */
+            opacity: 0.5;  /* Adjust opacity (1 is fully visible, 0 is fully transparent) */
             background-image: url("data:image/png;base64,{base64_image}");
             background-size: contain;
             background-position: fit;
