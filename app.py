@@ -110,7 +110,7 @@ with tab2:
             
         except Exception as e:
             st.error(f"Error: {e}")
-        st.write(df)
+        st.dataframe(df, use_container_width=True)
     st.markdown(
     """
     <style>
@@ -137,7 +137,7 @@ with tab2:
         df["Tool Wear"] = ["Worn" if p[0] > 0.5 else "Unworn" for p in prediction]
         df["Visual inspection"] = ["Properly Clamped" if p[1] > 0.5 else "Not Properly Clamped" for p in prediction]
         df["Machining Completion"] = ["Completed" if p[2] > 0.5 else "Not Completed" for p in prediction]
-        st.write(df)
+        st.dataframe(df, use_container_width=True)
         st.markdown(
         """
         <style>
@@ -150,7 +150,7 @@ with tab2:
             transition: 0.3s;
         }
         div.stDownloadButton > button:hover {
-            background-color: #005f73 !important; /* Darker blue on hover */
+            background-color: green !important; /* Darker blue on hover */
             transform: scale(1.05);
         }
         </style>
