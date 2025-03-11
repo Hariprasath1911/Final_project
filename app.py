@@ -90,7 +90,7 @@ with tab1:
         The CNC Time Series Analysis project is a data-driven approach to predictive maintenance in manufacturing.
         By leveraging deep learning, it enhances CNC machine efficiency, minimizes downtime, and provides actionable insights for maintenance teams.
         This project bridges the gap between AI and industrial automation, bringing intelligent decision-making to CNC operations.
-        <h1>""", unsafe_allow_html=True)
+        </h1>""", unsafe_allow_html=True)
 with tab2:
     st.markdown(
     """
