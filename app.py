@@ -102,7 +102,7 @@ with tab2:
     """
     <style>
     .stFileUploader label {
-        color: green !important;  /* Change text color */
+        color: blue !important;  /* Change text color */
         font-size: 20px !important; /* Change font size */
         font-weight: bold !important;
     }
