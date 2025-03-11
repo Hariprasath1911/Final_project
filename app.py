@@ -101,9 +101,9 @@ with tab2:
         st.write(df)
         st.download_button("Download Predictions", df.to_csv(index=False), "predictions.csv", "text/csv")
 
-        tool_condition = ["Worn" if p[0] > 0.5 else "Unworn" for p in prediction]
-        machine_finalized = ["Completed" if p[1] > 0.5 else "Not Completed" for p in prediction]
-        visual_inspection = ["Inspection Passed" if p[2] > 0.5 else "Inspection Failed" for p in prediction]
+        tool_condition = ["Worn" if p[0,0] > 0.5 else "Unworn" for p in prediction]
+        machine_finalized = ["Completed" if p[1,0] > 0.5 else "Not Completed" for p in prediction]
+        visual_inspection = ["Inspection Passed" if p[2,0] > 0.5 else "Inspection Failed" for p in prediction]
         
         st.markdown(f"### :green[Tool Condition: {tool_condition}]")
         st.markdown(f"### :green[Machine Finalized: {machine_finalized}]")
