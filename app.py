@@ -142,16 +142,17 @@ with tab2:
         """
         <style>
         div.stDownloadButton > button {
-            color: white !important;  /* Text color */
-            background-color: green !important;  /* Button background color */
-            border-radius: 10px !important;  /* Rounded corners */
-            font-size: 18px !important;  /* Font size */
-            font-weight: bold !important; /* Bold text */
-            padding: 10px 20px !important; /* Padding */
+            color: white !important;
+            background-color: green !important; /* Blue color */
+            font-size: 18px;
+            border-radius: 10px;
+            padding: 10px 20px;
+            transition: 0.3s;
         }
-        div.stDownloadButton > DownloadButton:hover {
-        background-color: #005f73 !important; /* Darker blue on hover */
-        transform: scale(1.05);
+        div.stDownloadButton > button:hover {
+            background-color: #005f73 !important; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
         </style>
         """,
         unsafe_allow_html=True
