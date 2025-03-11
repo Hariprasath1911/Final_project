@@ -30,7 +30,7 @@ def set_background_image_local(image_path):
 set_background_image_local(r"12.png")
 st.markdown(
     """
-    <h1 style='color: #FFA500; font-family: "Arial", sans-serif; font-size: 40px; 
+    <h1 style='color: green; font-family: "Arial", sans-serif; font-size: 40px; 
                text-shadow: 3px 3px 8px rgba(0,0,0,0.5); text-align: center;'>
         CNC : Real-time Data & Predictive Analytics
     </h1>
@@ -115,12 +115,16 @@ with tab2:
     """
     <style>
     div.stButton > button {
-        color: white !important;  /* Text color */
-        background-color: green !important;  /* Button background color */
-        border-radius: 10px !important;  /* Rounded corners */
-        font-size: 18px !important;  /* Font size */
-        font-weight: bold !important; /* Bold text */
-        padding: 10px 20px !important; /* Padding */
+        color: white !important;
+        background-color: #008CBA !important; /* Blue color */
+        font-size: 18px;
+        border-radius: 10px;
+        padding: 10px 20px;
+        transition: 0.3s;
+    }
+    div.stButton > button:hover {
+        background-color: #005f73 !important; /* Darker blue on hover */
+        transform: scale(1.05);
     }
     </style>
     """,
