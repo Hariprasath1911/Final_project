@@ -73,30 +73,24 @@ with tab1:
             However, unexpected failures and inefficiencies can lead to costly downtimes.
             My CNC Time Series Analysis project utilizes deep learning to analyze machine data, predict performance trends, and detect anomalies,
             ensuring optimal machine health and efficiency.
-            
-            <h1>1. Introduction</h1>
             <h1>2. Problem Statement</h1>
             CNC machines generate large volumes of time-series data, including spindle speed, feed rate, tool wear, and temperature variations.
             Manually monitoring these parameters is challenging and inefficient. Unscheduled downtime leads to production losses and increased maintenance costs.
             This project leverages deep learning models to identify patterns, detect anomalies, and predict potential failures, allowing for proactive maintenance.
-            
             <h1>3. Key Features</h1>
             ✅ Real-Time Data Analysis – Processes CNC machine time-series data efficiently.<br>
             ✅ Deep Learning Models – Implements LSTM/GRU-based models for precise forecasting.<br>
             ✅ Anomaly Detection – Identifies unusual patterns to prevent machine failures.<br>
             ✅ Feature Engineering – Extracts meaningful insights from historical machine logs.<br>
             ✅ Interactive Dashboard – A Streamlit-based UI for visualizing trends and alerts.<br>
-            
             <h1>4. Target Audience</h1>
             🔹 Manufacturing Industries – Optimizing CNC machine performance and reducing downtime.<br>
             🔹 Maintenance Teams – Predicting potential failures for proactive servicing.<br>
             🔹 Industrial Data Analysts – Utilizing AI-driven insights for process optimization.<br>
-            
             <h1>5. Technologies Used</h1>
             🔸 Frontend: Streamlit for an intuitive and interactive web app.<br>
             🔸 Backend: Python with libraries like TensorFlow/Keras, Pandas, and NumPy.<br>
             🔸 Data Handling: Preprocessing using Pandas and Scikit-learn.<br>
-            
             <h1>6. Conclusion</h1>
             The CNC Time Series Analysis project is a data-driven approach to predictive maintenance in manufacturing.
             By leveraging deep learning, it enhances CNC machine efficiency, minimizes downtime, and provides actionable insights for maintenance teams.
